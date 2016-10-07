@@ -20,6 +20,10 @@ app.get("/dreams", function (request, response) {
   response.send(dreams);
 });
 
+app.get("/ambitions", function (request, response) {
+  response.send(ambitions);
+});
+
 // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
 app.post("/dreams", function (request, response) {
   dreams.push(request.query.dream);
@@ -28,6 +32,14 @@ app.post("/dreams", function (request, response) {
 
 // Simple in-memory store for now
 var dreams = [
+  "Find and count some sheep",
+  "Climb a really tall mountain",
+  "Wash the dishes",
+  "write apps"
+  ];
+
+// Simple in-memory store for now
+var ambitions = [
   "Find and count some sheep",
   "Climb a really tall mountain",
   "Wash the dishes",
